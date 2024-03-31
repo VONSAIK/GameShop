@@ -1,4 +1,4 @@
-document.getElementById('loginBtn').addEventListener('click', function() {
+/*document.getElementById('loginBtn').addEventListener('click', function() {
     document.getElementById('loginForm').style.display = 'block';
 });
 
@@ -22,4 +22,4 @@ document.getElementById('signInForm').addEventListener('submit', function(event)
     } else {
         alert('Ще немає зареєстрованих користувачів.');
     }
-});
+});*/

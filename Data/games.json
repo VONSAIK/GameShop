@@ -1,0 +1,242 @@
+[
+    {
+        "id": 1,
+        "title": "Northgard",
+        "image": "/images/Northgard.jpg",
+
+        "release_date": "7 бер. 2018",
+        "genre": "Інді, Симулятор, Стратегія",
+        "developer": "Shiro Games",
+        "publisher": "Shiro Games",
+        "platform": "PC",
+
+        "os": "Windows 7, 8, 10 (64-bit)",
+        "processor": "Intel або AMD, 2.0 Ghz",
+        "ram": "1 GB ОЗУ",
+        "video_card": "Nvidia 450 GTS",
+        "disc_space": "1 GB",
+
+        "description": "Новий проект студії Shiro Games, Northgard, запозичив дещо від Banished, дещо від Civilization VI і в результаті виявився чудовою глобальною стратегією в реальному часі, оформленою в казковому сеттингу, заснованому на скандинавській міфології. Гра розповість нам історію вікінгів, які відкрили багаті землі Нордгард — багаті не лише на ресурси, а й на небезпеки та таємниці...",
+        "link": "https://store.steampowered.com/app/466560/Northgard/"
+    },
+    {
+        "id": 2,
+        "title": "",
+        "image": "/images/",
+
+        "release_date": "",
+        "genre": "",
+        "developer": "",
+        "publisher": "",
+        "platform": "",
+
+        "os": "",
+        "processor": "",
+        "ram": "",
+        "video_card": "",
+        "disc_space": "",
+
+        "description": "",
+        "link": ""
+    },
+    {
+        "id": 3,
+        "title": "",
+        "image": "/images/",
+
+        "release_date": "",
+        "genre": "",
+        "developer": "",
+        "publisher": "",
+        "platform": "",
+
+        "os": "",
+        "processor": "",
+        "ram": "",
+        "video_card": "",
+        "disc_space": "",
+
+        "description": "",
+        "link": ""
+    },
+    {
+        "id": 4,
+        "title": "",
+        "image": "/images/",
+
+        "release_date": "",
+        "genre": "",
+        "developer": "",
+        "publisher": "",
+        "platform": "",
+
+        "os": "",
+        "processor": "",
+        "ram": "",
+        "video_card": "",
+        "disc_space": "",
+
+        "description": "",
+        "link": ""
+    },
+    {
+        "id": 5,
+        "title": "",
+        "image": "/images/",
+
+        "release_date": "",
+        "genre": "",
+        "developer": "",
+        "publisher": "",
+        "platform": "",
+
+        "os": "",
+        "processor": "",
+        "ram": "",
+        "video_card": "",
+        "disc_space": "",
+
+        "description": "",
+        "link": ""
+    },
+    {
+        "id": 6,
+        "title": "",
+        "image": "/images/",
+
+        "release_date": "",
+        "genre": "",
+        "developer": "",
+        "publisher": "",
+        "platform": "",
+
+        "os": "",
+        "processor": "",
+        "ram": "",
+        "video_card": "",
+        "disc_space": "",
+
+        "description": "",
+        "link": ""
+    },
+    {
+        "id": 7,
+        "title": "",
+        "image": "/images/",
+
+        "release_date": "",
+        "genre": "",
+        "developer": "",
+        "publisher": "",
+        "platform": "",
+
+        "os": "",
+        "processor": "",
+        "ram": "",
+        "video_card": "",
+        "disc_space": "",
+
+        "description": "",
+        "link": ""
+    },
+    {
+        "id": 8,
+        "title": "",
+        "image": "/images/",
+
+        "release_date": "",
+        "genre": "",
+        "developer": "",
+        "publisher": "",
+        "platform": "",
+
+        "os": "",
+        "processor": "",
+        "ram": "",
+        "video_card": "",
+        "disc_space": "",
+
+        "description": "",
+        "link": ""
+    },
+    {
+        "id": 9,
+        "title": "",
+        "image": "/images/",
+
+        "release_date": "",
+        "genre": "",
+        "developer": "",
+        "publisher": "",
+        "platform": "",
+
+        "os": "",
+        "processor": "",
+        "ram": "",
+        "video_card": "",
+        "disc_space": "",
+
+        "description": "",
+        "link": ""
+    },
+    {
+        "id": 10,
+        "title": "",
+        "image": "/images/",
+
+        "release_date": "",
+        "genre": "",
+        "developer": "",
+        "publisher": "",
+        "platform": "",
+
+        "os": "",
+        "processor": "",
+        "ram": "",
+        "video_card": "",
+        "disc_space": "",
+
+        "description": "",
+        "link": ""
+    },
+    {
+        "id": 11,
+        "title": "",
+        "image": "/images/",
+
+        "release_date": "",
+        "genre": "",
+        "developer": "",
+        "publisher": "",
+        "platform": "",
+
+        "os": "",
+        "processor": "",
+        "ram": "",
+        "video_card": "",
+        "disc_space": "",
+
+        "description": "",
+        "link": ""
+    },
+    {
+        "id": 12,
+        "title": "",
+        "image": "/images/",
+
+        "release_date": "",
+        "genre": "",
+        "developer": "",
+        "publisher": "",
+        "platform": "",
+
+        "os": "",
+        "processor": "",
+        "ram": "",
+        "video_card": "",
+        "disc_space": "",
+
+        "description": "",
+        "link": ""
+    }
+]
