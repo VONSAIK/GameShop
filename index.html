@@ -14,8 +14,8 @@
             <il>Жанри</il>
             <il>Новини</il>
             <il>Форум</il>
-            <il><a href="#">Зареєструватись</a></il>
-            <il><a href="#">Увійти</a></il>
+            <il><a href="/register.html">Зареєструватись</a></il>
+            <p><a href="#" id="loginBtn">Увійти</a></p>
         </ul>
     </header>
 
@@ -29,6 +29,19 @@
         </ul>
     </nav>
 
+    <div id="loginForm" style="display: none;">
+        <h3>Вхід на сайт</h3>
+        <form id="signInForm">
+            <label for="loginEmail">Електронна пошта:</label>
+            <input type="email" id="loginEmail" name="loginEmail" required><br>
+            
+            <label for="loginPassword">Пароль:</label>
+            <input type="password" id="loginPassword" name="loginPassword" required><br>
+            
+            <button type="submit">Увійти</button>
+        </form>
+    </div>
+    
     <main>
         <h2>GameShop</h2>
         <p>Вітаю вас на моєму сайті! Цей сайт призначений для пошуку цікавої вам гри.</p>

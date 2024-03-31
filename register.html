@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameShop Registration</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <h1>Реєстрація на сайті GameShop</h1>
+    <form id="registrationForm">
+        <fieldset>
+            <legend>Основна інформація</legend>
+            <label for="username">Ім'я користувача:</label>
+            <input type="text" id="username" name="username" required><br>
+            
+            <label for="email">Електронна пошта:</label>
+            <input type="email" id="email" name="email" required><br>
+            
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Додаткова інформація</legend>
+            <label for="age">Ваш вік:</label>
+            <input type="number" id="age" name="age" min="12" max="100" required><br>
+            
+            <label for="gender">Стать:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Оберіть стать</option>
+                <option value="male">Чоловіча</option>
+                <option value="female">Жіноча</option>
+                <option value="other">Інше</option>
+            </select><br>
+            
+            <label for="bio">Про себе:</label><br>
+            <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Розкажіть трохи про себе"></textarea><br>
+            
+            <label for="agreeTerms">
+                <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                Згоден з правилами користування
+            </label>
+        </fieldset>
+
+        <button type="submit"><a href="/index.html">Зареєструватись<a></button>
+    </form>
+    <script src="/scrips/register.js"></script>
+</body>
+</html>
