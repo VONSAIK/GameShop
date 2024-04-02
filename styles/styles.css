@@ -102,19 +102,19 @@ section a:hover {
 
 /* Стилі для різних секцій */
 #section1 {
-    background-color: #e0e0e0; /* Сірий фон для секції "Стратегії" */
+    background-color: #e0e0e0; 
 }
 
 #section2 {
-    background-color: #d3d3d3; /* Сірий фон для секції "Рольові(RPG)" */
+    background-color: #d3d3d3; 
 }
 
 #section3 {
-    background-color: #c6c6c6; /* Сірий фон для секції "Шутери" */
+    background-color: #c6c6c6; 
 }
 
 #section4 {
-    background-color: #b9b9b9; /* Сірий фон для секції "Симулятори" */
+    background-color: #b9b9b9; 
 }
 
 
@@ -168,4 +168,54 @@ a {
 
 a:hover {
     text-decoration: underline; /* підкреслюємо посилання при наведенні курсору */
+}
+
+form {
+    max-width: 600px; /* Максимальна ширина форми */
+    margin: 0 auto; /* Центруємо форму по горизонталі */
+    padding: 20px; /* Відступи */
+    border: 1px solid #ccc; /* Рамка навколо форми */
+    border-radius: 10px; /* Закруглені кути форми */
+}
+
+/* Стилі для заголовка форми */
+.form h2 {
+    text-align: center; /* Вирівнювання тексту по центру */
+}
+
+/* Стилі для полів вводу */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="number"],
+form select,
+form textarea {
+    width: 100%; /* Захоплюємо всю доступну ширину */
+    padding: 10px; /* Відступи вокруг полів вводу */
+    margin-bottom: 15px; /* Відступ між полями */
+    border: 1px solid #ccc; /* Рамка навколо полів вводу */
+    border-radius: 5px; /* Закруглені кути полів вводу */
+    box-sizing: border-box; /* Враховуємо товщину рамки у загальній ширині елемента */
+}
+
+/* Стилі для лейблів полів вводу */
+form label {
+    font-weight: bold; /* Жирний шрифт */
+}
+
+/* Стилі для кнопки "Зареєструватись" */
+form button {
+    width: 100%; /* Захоплюємо всю доступну ширину */
+    padding: 10px; /* Відступи */
+    background-color: #333; /* Колір фону кнопки */
+    color: #fff; /* Колір тексту кнопки */
+    border: none; /* Видаляємо рамку */
+    border-radius: 5px; /* Закруглені кути */
+    cursor: pointer; /* Змінюємо курсор при наведенні */
+    transition: background-color 0.3s; /* Плавна анімація зміни кольору фону */
+}
+
+/* Анімація при наведенні на кнопку */
+form button:hover {
+    background-color: #555; /* Зміна кольору фону при наведенні */
 }
