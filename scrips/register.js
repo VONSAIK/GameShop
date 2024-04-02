@@ -1,4 +1,4 @@
-/*document.getElementById('registrationForm').addEventListener('submit', function(event) {
+document.getElementById('registrationForm').addEventListener('submit', function(event) {
     event.preventDefault();
     // Отримання даних з форми
     var formData = {
@@ -16,4 +16,4 @@
 
     alert('Ви успішно зареєстровані!');
     document.getElementById('registrationForm').reset();
-});*/
+});

@@ -16,11 +16,11 @@ fetch('/Data/games.json')
                         <img src="${game.image}" alt="${game.title}">
                         <div>
                             <ol>
-                                <il>Дата релізу:${game.release_date}</il>
-                                <il>Жанри: ${game.genre}</il>
-                                <il>Розробник: ${game.developer}</il>
-                                <ilr>Видавець: ${game.publisher}</il>
-                                <il>Платформа: ${game.platform}</il>
+                                <li>Дата релізу:${game.release_date}</li>
+                                <li>Жанри: ${game.genre}</li>
+                                <li>Розробник: ${game.developer}</li>
+                                <li>Видавець: ${game.publishe}</li>
+                                <li>Платформа: ${game.platform}</li>
                             </ol>
                             <table border="1">
                                 <tr>

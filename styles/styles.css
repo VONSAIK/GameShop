@@ -1,0 +1,80 @@
+/* Загальні стилі для всієї сторінки */
+
+/* Стилі для тіла сторінки */
+body {
+    font-family: Arial, sans-serif; /* Встановлюємо шрифт */
+    margin: 0; /* Видаляємо зовнішні відступи */
+    padding: 0; /* Видаляємо внутрішні відступи */
+}
+
+/* Стилі для заголовка */
+header {
+    background-color: #333; /* колір тла */
+    color: white; /* колір тексту */
+    padding: 20px; /* відступи */
+    display: flex; /* використовуємо flexbox */
+    align-items: center; /* вирівнюємо елементи по вертикалі по центру */
+}
+
+header h1 {
+    margin: 20px; /* Видаляємо зовнішні відступи */
+}
+
+header ul {
+    list-style-type: none; /* видаляємо маркери списку */
+    padding: 0; /* видаляємо внутрішні відступи */
+    display: flex; /* використовуємо flexbox */   
+}
+
+header ul li {
+    margin-right: 30px; /* збільшуємо відступ між елементами */
+}
+
+/* Стилі для навігаційного меню */
+nav {
+    background-color: #444; /* колір тла */
+    color: white; /* колір тексту */
+    padding: 10px; /* відступи */
+}
+
+nav ul {
+    list-style-type: none; /* видаляємо маркери списку */
+    padding: 0; /* видаляємо внутрішні відступи */
+    display: flex; /* використовуємо flexbox */
+}
+
+nav ul li {
+    margin-right: 30px; /* збільшуємо відступ між елементами */
+}
+
+nav ul li a {
+    color: white; /* колір тексту посилань */
+    text-decoration: none; /* видаляємо підкреслення посилань */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* підкреслюємо посилання при наведенні курсору */
+}
+
+/* Стилі для головного вмісту */
+main {
+    padding: 20px; /* відступи */
+}
+
+/* Стилі для футера */
+footer {
+    background-color: #333; /* колір тла */
+    color: white; /* колір тексту */
+    padding: 20px; /* відступи */
+    text-align: center; /* вирівнювання тексту по центру */
+}
+
+/* Стилі для посилань */
+a {
+    color: white; /* колір тексту посилань */
+    text-decoration: none; /* видаляємо підкреслення посилань */
+}
+
+a:hover {
+    text-decoration: underline; /* підкреслюємо посилання при наведенні курсору */
+}
