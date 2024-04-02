@@ -9,11 +9,13 @@ body {
 
 /* Стилі для заголовка */
 header {
-    background-color: #333; /* колір тла */
-    color: white; /* колір тексту */
-    padding: 20px; /* відступи */
-    display: flex; /* використовуємо flexbox */
-    align-items: center; /* вирівнюємо елементи по вертикалі по центру */
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    width: 100%; /* Захоплюємо всю ширину екрану */
+    z-index: 1000;
 }
 
 header h1 {
@@ -30,43 +32,62 @@ header ul li {
     margin-right: 30px; /* збільшуємо відступ між елементами */
 }
 
+/* Стилі для головного вмісту */
+main {
+    display: flex;
+}
+
+.content {
+    flex-grow: 1; /* Розтягуємо контент на доступну ширину */
+    padding: 20px; /* Відступи контенту */
+}
+
+section {
+    margin-left: 20px; /* Збільшуємо відступ, щоб контент не накладався на навігаційне меню */
+    padding: 20px;
+}
+
 /* Стилі для навігаційного меню */
 nav {
-    background-color: #444; /* колір тла */
-    color: white; /* колір тексту */
-    padding: 10px; /* відступи */
+    background-color: #444; /* Колір фону навігаційного меню */
+    color: #fff; /* Колір тексту навігаційного меню */
+    padding: 10px; /* Відступи навігаційного меню */
+    width: 200px; /* Ширина навігаційного меню */
+    overflow-y: auto;
 }
 
 nav ul {
-    list-style-type: none; /* видаляємо маркери списку */
-    padding: 0; /* видаляємо внутрішні відступи */
-    display: flex; /* використовуємо flexbox */
+    list-style-type: none; /* Видалення маркерів списку */
+    margin: 0;
+    padding: 0;
+    flex-grow: 1; /* Розтягуємо список по всій доступній висоті */
 }
 
 nav ul li {
-    margin-right: 30px; /* збільшуємо відступ між елементами */
+    margin-bottom: 5px; /* Відступ між пунктами меню */
 }
 
 nav ul li a {
-    color: white; /* колір тексту посилань */
-    text-decoration: none; /* видаляємо підкреслення посилань */
+    color: #fff; /* Колір посилань */
+    text-decoration: none; /* Видалення підкреслення з посилань */
+    display: block; /* Розташування посилань як блочних елементів */
+    padding: 5px; /* Відступи */
 }
 
 nav ul li a:hover {
-    text-decoration: underline; /* підкреслюємо посилання при наведенні курсору */
-}
-
-/* Стилі для головного вмісту */
-main {
-    padding: 20px; /* відступи */
+    background-color: #555; /* Колір фону при наведенні на посилання */
 }
 
 /* Стилі для футера */
 footer {
-    background-color: #333; /* колір тла */
-    color: white; /* колір тексту */
-    padding: 20px; /* відступи */
-    text-align: center; /* вирівнювання тексту по центру */
+    background-color: #333; /* Колір фону */
+    color: #fff; /* Колір тексту */
+    text-align: center; /* Вирівнювання тексту по центру */
+    padding: 10px; /* Відступи */
+    clear: both; /* Вирівнюємо футер під усі блоки */
+    position: relative; /* Встановлюємо позицію */
+    bottom: 0; /* Розміщуємо футер внизу сторінки */
+    width: 100%; /* Розтягуємо футер на всю ширину */
 }
 
 /* Стилі для посилань */
