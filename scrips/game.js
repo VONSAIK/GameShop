@@ -19,7 +19,7 @@ fetch('/Data/games.json')
                                 <il>Дата релізу:${game.release_date}</il>
                                 <il>Жанри: ${game.genre}</il>
                                 <il>Розробник: ${game.developer}</il>
-                                <ilr>Видавець: ${game.publishe}</il>
+                                <ilr>Видавець: ${game.publisher}</il>
                                 <il>Платформа: ${game.platform}</il>
                             </ol>
                             <table border="1">
