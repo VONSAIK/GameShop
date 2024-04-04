@@ -58,3 +58,7 @@ fetch('/Data/games.json')
                 }
             })
             .catch(error => console.error('Помилка завантаження даних:', error));
+
+document.querySelector('header h1').addEventListener('click', function() {
+  document.querySelector('header ul.dropdown').classList.toggle('active');
+});

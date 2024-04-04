@@ -1,292 +1,287 @@
-/* Загальні стилі для всієї сторінки */
-
-/* Стилі для тіла сторінки */
 body {
-    font-family: Arial, sans-serif; /* Встановлюємо шрифт */
-    margin: 0; /* Видаляємо зовнішні відступи */
-    padding: 0; /* Видаляємо внутрішні відступи */
-}
-
-/* Стилі для заголовка */
-header {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    left: 0;
+    right: 0;
+    top: 0;
     background-color: #333;
-    color: white;
+    color: #fff;
     padding: 20px;
     display: flex;
     align-items: center;
-    width: 100%; /* Захоплюємо всю ширину екрану */
-    z-index: 1000;
-}
+    justify-content: space-between;
+  }
+  header h1 {
+    transition: .5s;
+  }
+  header h1:hover{
+    transform: scale(1.2)
+  }
+  header nav ul{
+    list-style-type: none;
+  }
+  header nav ul li{
+    position: relative;
+    float: left;
+    width: auto;
+  }
+  header nav ul li a{
+    text-decoration: none;
+    padding: 20px;
+    color: #fff;
+    font-size: 20px;
+    display: block;
+  }
+  header nav ul li a:hover{
+    background-color: #555;
+  }
 
-header h1 {
-    margin: 20px; /* Видаляємо зовнішні відступи */
-}
+  nav ul li ul{
+    position: absolute;
+    padding: 0;
+    left: 0;
+    width: auto;
+    background: #555;
+    display: none;
+  }
 
-header ul {
-    list-style-type: none; /* видаляємо маркери списку */
-    padding: 0; /* видаляємо внутрішні відступи */
-    display: flex; /* використовуємо flexbox */   
-}
+  nav ul li ul ol{
+    width: 100%;
+  }
 
-header ul li {
-    margin-right: 30px; /* збільшуємо відступ між елементами */
-}
-
-
-
-/* Стилі для головного вмісту */
-main {
+  
+  @media screen and (max-width: 768px) {
+    section {
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+    }
+  
+    section img {
+      margin-bottom: 20px; 
+    }
+    header {
+      flex-direction: column; 
+      align-items: flex-start; 
+    }
+    header h1 {
+      margin-bottom: 10px;
+    }
+    nav ul li{
+        display: none;
+    }
+    .menu{
+        display: initial;
+    }
+    .menu:hover > ul{
+        display: initial;
+    }
+    main nav {
+      display: none; 
+    }
+  }
+  
+  main {
     display: flex;
-    background-color: #f2f2f2; /* Ледь сірий фон */
-}
-
-.content {
-    flex-grow: 1; /* Розтягуємо контент на доступну ширину */
-    padding: 20px; /* Відступи контенту */
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-section {
+    background-color: #f2f2f2;
+  }
+  
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  }
+  
+  section {
     text-align: center;
     padding: 20px;
-    margin-bottom: 20px; /* Додатковий відступ між секціями */
-    display: flex; /* Встановлюємо властивість flex */
-    flex-wrap: wrap; /* Розміщуємо елементи в ряд на кілька рядків */
-}
-
-/* Стилі для заголовків розділів */
-section h3 {
-    width: 100%; /* Захоплюємо всю ширину секції */
-    margin-bottom: 30px; /* Додатковий відступ між заголовком і блоками */
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  section h3 {
+    width: 100%;
+    margin-bottom: 30px;
     text-align: center;
-
-}
-
-/* Стилі для картинок у розділах */
-section img {
-    max-width: 100%; /* Максимальна ширина картинки - 100% ширини батьківського контейнера */
-    height: auto; /* Автоматична висота для збереження пропорцій */
-    margin-bottom: 10px; /* Додатковий відступ після картинки */
-}
-
-/* Стилі для тексту під картинками у розділах */
-section p {
+  }
+  section img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  section p {
     color: #333;
-}
-
-/* Стилі для рядків блоків ігор */
-section div {
-    flex: 0 0 calc(33.33% - 20px); /* Розраховуємо ширину блоків ігор */
-    margin-right: 20px; /* Додатковий відступ між блоками */
-    margin-bottom: 20px; /* Відступ між рядками блоків */
-    opacity: 80%; /* Початкова прозорість блоку */
-    transform: translateY(20px); /* Початкове зміщення вниз на 20px */
-    transition: opacity 0.3s, transform 0.3s; /* Додати плавну анімацію для прозорості та зміщення */
-}
-
-/* Анімація при наведенні */
-section div:hover {
-    opacity: 1; /* Зміна прозорості на повну при наведенні */
-    transform: translateY(0); /* Зміщення назад в положення за замовчуванням */
-}
-
-/* Стилі для блоків ігор */
-section div > div {
-    flex-basis: calc(33.33% - 10px); /* Ширина блоку ігри (33.33% з відступом) */
-    margin-bottom: 10px; /* Відступ між рядками блоків */
-}
-
-section a:hover {
+  }
+  section div {
+    flex: 0 0 calc(33.33% - 20px);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    opacity: 80%;
+    transform: translateY(20px);
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  section div:hover {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  section div > div {
+    flex-basis: calc(33.33% - 10px);
+    margin-bottom: 10px;
+  }
+  section a:hover {
     text-decoration: none;
-}
-
-/* Стилі для різних секцій */
-#section1 {
-    background-color: #e0e0e0; 
-}
-
-#section2 {
-    background-color: #d3d3d3; 
-}
-
-#section3 {
-    background-color: #c6c6c6; 
-}
-
-#section4 {
-    background-color: #b9b9b9; 
-}
-
-
-/* Стилі для навігаційного меню */
-nav {
-    background-color: #444; /* Колір фону навігаційного меню */
-    color: #fff; /* Колір тексту навігаційного меню */
-    padding: 10px; /* Відступи навігаційного меню */
-    width: 200px; /* Ширина навігаційного меню */
-}
-
-nav ul {
-    list-style-type: none; /* Видалення маркерів списку */
+  }
+  
+  #section1 {
+    background-color: #e0e0e0;
+  }
+  
+  #section2 {
+    background-color: #d3d3d3;
+  }
+  
+  #section3 {
+    background-color: #c6c6c6;
+  }
+  
+  #section4 {
+    background-color: #b9b9b9;
+  }
+  
+  main nav {
+    background-color: #444;
+    color: #fff;
+    padding: 10px;
+    width: 200px;
+  }
+  
+  main nav ul {
+    list-style-type: none;
     margin: 0;
     padding: 0;
-    flex-grow: 1; /* Розтягуємо список по всій доступній висоті */
-}
-
-nav ul li {
-    margin-bottom: 5px; /* Відступ між пунктами меню */
-}
-
-nav ul li a {
-    color: #fff; /* Колір посилань */
-    text-decoration: none; /* Видалення підкреслення з посилань */
-    display: block; /* Розташування посилань як блочних елементів */
-    padding: 5px; /* Відступи */
-}
-
-nav ul li a:hover {
-    background-color: #555; /* Колір фону при наведенні на посилання */
-}
-
-/* Стилі для футера */
-footer {
-    background-color: #333; /* Колір фону */
-    color: #fff; /* Колір тексту */
-    text-align: center; /* Вирівнювання тексту по центру */
-    padding: 10px; /* Відступи */
-    clear: both; /* Вирівнюємо футер під усі блоки */
-    position: relative; /* Встановлюємо позицію */
-    bottom: 0; /* Розміщуємо футер внизу сторінки */
-    width: 100%; /* Розтягуємо футер на всю ширину */
-}
-
-/* Стилі для посилань */
-a {
-    color: white; /* колір тексту посилань */
-    text-decoration: none; /* видаляємо підкреслення посилань */
-}
-
-a:hover {
-    text-decoration: underline; /* підкреслюємо посилання при наведенні курсору */
-}
-
-form {
-    max-width: 600px; /* Максимальна ширина форми */
-    margin: 0 auto; /* Центруємо форму по горизонталі */
-    padding: 20px; /* Відступи */
-    border: 1px solid #ccc; /* Рамка навколо форми */
-    border-radius: 10px; /* Закруглені кути форми */
-}
-
-/* Стилі для заголовка форми */
-.form h2 {
-    text-align: center; /* Вирівнювання тексту по центру */
-}
-
-/* Стилі для полів вводу */
-form input[type="text"],
-form input[type="email"],
-form input[type="password"],
-form input[type="number"],
-form select,
-form textarea {
-    width: 100%; /* Захоплюємо всю доступну ширину */
-    padding: 10px; /* Відступи вокруг полів вводу */
-    margin-bottom: 15px; /* Відступ між полями */
-    border: 1px solid #ccc; /* Рамка навколо полів вводу */
-    border-radius: 5px; /* Закруглені кути полів вводу */
-    box-sizing: border-box; /* Враховуємо товщину рамки у загальній ширині елемента */
-}
-
-/* Стилі для лейблів полів вводу */
-form label {
-    font-weight: bold; /* Жирний шрифт */
-}
-
-/* Стилі для кнопки "Зареєструватись" */
-form button {
-    width: 100%; /* Захоплюємо всю доступну ширину */
-    padding: 10px; /* Відступи */
-    background-color: #333; /* Колір фону кнопки */
-    color: #fff; /* Колір тексту кнопки */
-    border: none; /* Видаляємо рамку */
-    border-radius: 5px; /* Закруглені кути */
-    cursor: pointer; /* Змінюємо курсор при наведенні */
-    transition: background-color 0.3s; /* Плавна анімація зміни кольору фону */
-}
-
-/* Анімація при наведенні на кнопку */
-form button:hover {
-    background-color: #555; /* Зміна кольору фону при наведенні */
-}
-
-/* Стилі для сторінки "Деталі гри" */
-
-/* Стилі для головного вмісту */
-#gameDetails {
-    max-width: 800px; /* Максимальна ширина контенту */
-    margin: 20px auto; /* Центруємо контент по горизонталі */
-    padding: 20px; /* Відступи */
-    border: 1px solid #ccc; /* Рамка навколо контенту */
-    border-radius: 10px; /* Закруглені кути */
-}
-
-/* Стилі для заголовка сторінки */
-#gameDetails h2 {
+    flex-grow: 1;
+  }
+  main nav ul li {
+    margin-bottom: 5px;
+  }
+  main nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+  }
+  main nav ul li a:hover {
+    background-color: #555;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    clear: both;
+    position: relative;
+    bottom: 0;
     width: 100%;
-    margin-top: 0; /* Видаляємо верхній відступ */
-}
-
-/* Стилі для зображення гри */
-#gameDetails img {
-    max-width: 100%; /* Захоплюємо всю доступну ширину */
-    height: auto; /* Автоматична висота */
-    margin-bottom: 15px; /* Відступ після зображення */
-}
-
-/* Стилі для списку деталей гри */
-#gameDetails ol {
+  }
+  
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  .form h2 {
+    text-align: center;
+  }
+  
+  form input[type=text], form input[type=email], form input[type=password], form input[type=number] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  form label {
+    font-weight: bold;
+  }
+  form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  form button:hover {
+    background-color: #555;
+  }
+  
+  #gameDetails {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  #gameDetails h2 {
+    width: 100%;
+    margin-top: 0;
+  }
+  #gameDetails img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  #gameDetails ol {
     list-style: none;
-    margin-bottom: 15px; /* Відступ після списку */
-}
-
-/* Стилі для таблиці з характеристиками гри */
-#gameDetails table {
-    width: 100%; /* Захоплюємо всю доступну ширину */
-    margin-bottom: 15px; /* Відступ після таблиці */
-}
-
-/* Стилі для контейнера блоку зображення та інформацією про гру */
-#gameDetails > div {
-    display: flex; /* Використовуємо flexbox */
-    flex-wrap: wrap; /* Дозволяємо елементам переноситись на новий рядок */
-}
-
-/* Стилі для блоку зображення */
-#gameDetails > div > img {
-    max-width: 40%; /* Захоплюємо максимум 40% ширини контейнера */
-    margin-right: 20px; /* Відступ праворуч від зображення */
-}
-
-/* Стилі для списку деталей гри та таблиці */
-#gameDetails > div > ol,
-#gameDetails > div > table {
-    flex: 1; /* Розтягуємо елемент на залишену доступну ширину */
-    margin-bottom: 15px; /* Відступ після списку або таблиці */
-}
-
-/* Стилі для кнопки "Завантажити гру" */
-#gameDetails button {
-    padding: 10px 20px; /* Відступи */
-    background-color: #333; /* Колір фону кнопки */
-    color: #fff; /* Колір тексту кнопки */
-    border: none; /* Видаляємо рамку */
-    border-radius: 5px; /* Закруглені кути */
-    cursor: pointer; /* Змінюємо курсор при наведенні */
-    transition: background-color 0.3s; /* Плавна анімація зміни кольору фону */
-}
-
-/* Анімація при наведенні на кнопку */
-#gameDetails button:hover {
-    background-color: #555; /* Зміна кольору фону при наведенні */
-}
+    margin-bottom: 15px;
+  }
+  #gameDetails table {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  #gameDetails > div {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #gameDetails > div > img {
+    max-width: 40%;
+    margin-right: 20px;
+  }
+  #gameDetails > div > ol, #gameDetails > div > table {
+    flex: 1;
+    margin-bottom: 15px;
+  }
+  #gameDetails button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  #gameDetails button:hover {
+    background-color: #555;
+  }
+  
+  /*# sourceMappingURL=main.css.map */
+  
