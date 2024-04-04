@@ -15,7 +15,7 @@ var apple = {
   y: 320
 };
 var score = 0;
-var scores = [];
+var scores = JSON.parse(localStorage.getItem('snakeScores')) || [];
 
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
@@ -59,6 +59,7 @@ function loop() {
     for (var i = index + 1; i < snake.cells.length; i++) {
       if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
         scores.push(score);
+        localStorage.setItem('snakeScores', JSON.stringify(scores));
         score = 0;
         snake.x = 160;
         snake.y = 160;
@@ -76,13 +77,19 @@ function loop() {
   context.fillStyle = 'white';
   context.fillText('Score: ' + score, 10, 10);
 
-  // Відображення найбільших рахунків
-  var topScores = scores.sort((a, b) => b - a).slice(0, 3);
-  console.log('Top scores:', topScores);
+  // Виведення найбільших рахунків
+  context.fillStyle = 'white';
+  context.fillText('Top Scores:', 10, 30);
+  scores.sort((a, b) => b - a).slice(0, 3).forEach((value, index) => {
+    context.fillText((index + 1) + '. ' + value, 10, 50 + index * 20);
+  });
 
-  // Відображення найменших рахунків
-  var bottomScores = scores.sort((a, b) => a - b).slice(0, 3);
-  console.log('Bottom scores:', bottomScores);
+  // Виведення найменших рахунків
+  context.fillStyle = 'white';
+  context.fillText('Bottom Scores:', 10, canvas.height - 20);
+  scores.sort((a, b) => a - b).slice(0, 3).forEach((value, index) => {
+    context.fillText((index + 1) + '. ' + value, 10, canvas.height - 40 - index * 20);
+  });
 }
 
 document.addEventListener('keydown', function (e) {
