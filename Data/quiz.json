@@ -1,0 +1,47 @@
+[
+    {
+        "question": "Що таке FPS в ігровому світі?",
+        "answers": [
+            {"text": "Перша особа в грі", "correct": true},
+            {"text": "Футбольний симулятор", "correct": false},
+            {"text": "Фрі-плей старт", "correct": false},
+            {"text": "Функція планування сценарію", "correct": false}
+        ]
+    },
+    {
+        "question": "Яка компанія створила відому серію ігор 'The Witcher'?",
+        "answers": [
+            {"text": "Ubisoft", "correct": false},
+            {"text": "Blizzard Entertainment", "correct": false},
+            {"text": "CD Projekt", "correct": true},
+            {"text": "Rockstar Games", "correct": false}
+        ]
+    },
+    {
+        "question": "У якому році вийшла перша версія гри 'Minecraft'?",
+        "answers": [
+            {"text": "2008", "correct": false},
+            {"text": "2010", "correct": false},
+            {"text": "2011", "correct": true},
+            {"text": "2013", "correct": false}
+        ]
+    },
+    {
+        "question": "Яка назва першої гри серії 'Call of Duty'?",
+        "answers": [
+            {"text": "Call of Duty: Modern Warfare", "correct": false},
+            {"text": "Call of Duty: Black Ops", "correct": false},
+            {"text": "Call of Duty: World at War", "correct": false},
+            {"text": "Call of Duty", "correct": true}
+        ]
+    },
+    {
+        "question": "Яке ім'я у головного персонажа серії ігор 'Assassin's Creed'?",
+        "answers": [
+            {"text": "Ezio Auditore", "correct": false},
+            {"text": "Connor Kenway", "correct": false},
+            {"text": "Altair Ibn-La'Ahad", "correct": true},
+            {"text": "Edward Kenway", "correct": false}
+        ]
+    }
+]
