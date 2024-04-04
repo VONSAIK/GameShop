@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/main.css">
-    <title>Game Survay</title>
+    <title>Game Survey</title>
 </head>
 <body>
     <header>
@@ -15,13 +15,13 @@
                     <ul>
                         <ol><a href="#">Жанри</a></ol>
                         <ol><a href="#">Новини</a></ol>
-                        <ol><a href="#">Форум</a></ol>
+                        <ol><a href="/survey.html">Опитування</a></ol>
                         <ol><a href="/register.html">Зареєструватись</a></ol>
                     </ul>
                 </li>
                 <li><a href="#">Жанри</a></li>
                 <li><a href="#">Новини</a></li>
-                <li><a href="#">Форум</a></li>
+                <li><a href="/survey.html">Опитування</a></li>
                 <li><a href="/register.html">Зареєструватись</a></li>
             </ul>
         </nav>
@@ -87,24 +87,15 @@
         <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea><br><br>
         
         <input type="submit" value="Надіслати">
-    </form>
 
-    <script>
-        const form = document.getElementById('surveyForm');
+        <button><a href="/result.html">Переглянути результати опитування</a></button>
+    </form>
+    <footer>
+        <p>GameShop</p>
+        <p>by Vonsiak Viktor</p>
+    </footer>
+    <script src="/scrips/survey.js">
         
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
-            const formData = new FormData(this);
-            const formObject = {};
-            formData.forEach((value, key) => {
-                formObject[key] = value;
-            });
-            const surveyResults = JSON.parse(localStorage.getItem('surveyResults')) || [];
-            surveyResults.push(formObject);
-            localStorage.setItem('surveyResults', JSON.stringify(surveyResults));
-            alert('Дякуємо за ваші відповіді!');
-            form.reset();
-        });
     </script>
 </body>
 </html>

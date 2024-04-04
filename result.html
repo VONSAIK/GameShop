@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>Survey Results</title>
+</head>
+<body>
+    <header>
+        <h1>GameShop</h1>
+        <nav>
+            <ul>
+                <li class="menu"><a href="/index.html">Головна</a>
+                    <ul>
+                        <ol><a href="#">Жанри</a></ol>
+                        <ol><a href="#">Новини</a></ol>
+                        <ol><a href="/survey.html">Опитування</a></ol>
+                        <ol><a href="/register.html">Зареєструватись</a></ol>
+                    </ul>
+                </li>
+                <li><a href="#">Жанри</a></li>
+                <li><a href="#">Новини</a></li>
+                <li><a href="/survey.html">Опитування</a></li>
+                <li><a href="/register.html">Зареєструватись</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h2>Результати опитування</h2>
+
+    <form id="filterForm">
+        <label for="ageFilter">Фільтр за віком:</label>
+        <input type="number" id="ageFilter" name="ageFilter">
+        <br><br>
+        <label for="genreFilter">Фільтр за жанром:</label>
+        <select id="genreFilter" name="genreFilter">
+            <option value="">Будь-який жанр</option>
+            <option value="strategy">Стратегії</option>
+            <option value="rpg">Рольові (RPG)</option>
+            <option value="shooter">Шутери</option>
+        </select>
+        <br><br>
+        <label for="platformFilter">Фільтр за платформою:</label>
+        <select id="platformFilter" name="platformFilter">
+            <option value="">Будь-яка платформа</option>
+            <option value="PC">PC</option>
+            <option value="PlayStation">PlayStation</option>
+            <option value="Xbox">Xbox</option>
+            <option value="Nintendo Switch">Nintendo Switch</option>
+            <option value="Mobile">Mobile</option>
+            <option value="Other">Інша</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Застосувати фільтри">
+    </form>
+
+    <div id="surveyResults"></div>
+
+    <script src="/scrips/result.js">
+        
+    </script>
+</body>
+</html>

@@ -172,7 +172,10 @@ main nav ul li a {
 main nav ul li a:hover {
   background-color: #555;
 }
-
+a{
+  text-decoration: none;
+  color: white;
+}
 footer {
   background-color: #333;
   color: #fff;
@@ -299,6 +302,13 @@ form input[type=submit]:hover {
 }
 #gameDetails button:hover {
   background-color: #555;
+}
+#surveyResults p {
+  margin-bottom: 5px;
+  margin: 20px;
+}
+#surveyResults hr {
+  margin: 20px 0;
 }
 
 /*# sourceMappingURL=main.css.map */
