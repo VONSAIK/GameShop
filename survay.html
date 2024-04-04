@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>Game Survay</title>
+</head>
+<body>
+    <header>
+        <h1>GameShop</h1>
+        <nav>
+            <ul>
+                <li class="menu"><a href="/index.html">Головна</a>
+                    <ul>
+                        <ol><a href="#">Жанри</a></ol>
+                        <ol><a href="#">Новини</a></ol>
+                        <ol><a href="#">Форум</a></ol>
+                        <ol><a href="/register.html">Зареєструватись</a></ol>
+                    </ul>
+                </li>
+                <li><a href="#">Жанри</a></li>
+                <li><a href="#">Новини</a></li>
+                <li><a href="#">Форум</a></li>
+                <li><a href="/register.html">Зареєструватись</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h2>Опитування про комп'ютерні ігри</h2>
+    <form id="surveyForm">
+        <label for="name">Ваше ім'я:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="age">Ваш вік:</label>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <label for="country">Виберіть вашу країну:</label><br>
+        <select id="country" name="country" required>
+            <option value="">Оберіть країну</option>
+            <option value="USA">США</option>
+            <option value="UK">Велика Британія</option>
+            <option value="Germany">Німеччина</option>
+            <option value="France">Франція</option>
+            <option value="Other">Інше</option>
+        </select><br><br>
+        
+        <label for="birthdate">Ваша дата народження:</label><br>
+        <input type="date" id="birthdate" name="birthdate" required><br><br>
+
+        <label>Яким жанрам ігор ви віддаєте перевагу?</label><br>
+        <input type="checkbox" id="strategy" name="genre" value="strategy">
+        <label for="strategy">Стратегії</label><br>
+        <input type="checkbox" id="rpg" name="genre" value="rpg">
+        <label for="rpg">Рольові (RPG)</label><br>
+        <input type="checkbox" id="shooter" name="genre" value="shooter">
+        <label for="shooter">Шутери</label><br><br>
+
+        <label for="color">Ваш улюблений колір:</label><br>
+        <input type="color" id="color" name="color"><br><br>
+
+        <label for="favoriteGame">Ваша улюблена гра:</label>
+        <input type="text" id="favoriteGame" name="favoriteGame" required><br><br>
+        
+        <label>Як часто ви граєте в комп'ютерні ігри?</label><br>
+        <input type="radio" id="often" name="playFrequency" value="often" required>
+        <label for="often">Часто</label><br>
+        <input type="radio" id="sometimes" name="playFrequency" value="sometimes">
+        <label for="sometimes">Іноді</label><br>
+        <input type="radio" id="rarely" name="playFrequency" value="rarely">
+        <label for="rarely">Рідко</label><br><br>
+
+        <label for="hours">Скільки годин на тиждень ви проводите за грою?</label><br>
+        <input type="range" id="hours" name="hours" min="0" max="168" step="1" required><br><br>
+        
+        <label for="platform">На якій платформі ви граєте найчастіше?</label><br>
+        <select id="platform" name="platform" required>
+            <option value="">Оберіть платформу</option>
+            <option value="PC">PC</option>
+            <option value="PlayStation">PlayStation</option>
+            <option value="Xbox">Xbox</option>
+            <option value="Nintendo Switch">Nintendo Switch</option>
+            <option value="Mobile">Mobile</option>
+            <option value="Other">Інше</option>
+        </select><br><br>
+        
+        <label for="feedback">Ваш відгук про комп'ютерні ігри:</label><br>
+        <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea><br><br>
+        
+        <input type="submit" value="Надіслати">
+    </form>
+
+    <script>
+        const form = document.getElementById('surveyForm');
+        
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            const formObject = {};
+            formData.forEach((value, key) => {
+                formObject[key] = value;
+            });
+            const surveyResults = JSON.parse(localStorage.getItem('surveyResults')) || [];
+            surveyResults.push(formObject);
+            localStorage.setItem('surveyResults', JSON.stringify(surveyResults));
+            alert('Дякуємо за ваші відповіді!');
+            form.reset();
+        });
+    </script>
+</body>
+</html>
