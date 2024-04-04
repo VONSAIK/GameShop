@@ -16,6 +16,7 @@ var apple = {
 };
 var score = 0;
 var scores = JSON.parse(localStorage.getItem('snakeScores')) || [];
+var speed = 10; // Початкова швидкість
 
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
@@ -23,7 +24,7 @@ function getRandomInt(min, max) {
 
 function loop() {
   requestAnimationFrame(loop);
-  if (++count < 4) {
+  if (++count < speed) { // Змінюємо швидкість змійки
     return;
   }
   count = 0;
@@ -54,7 +55,10 @@ function loop() {
       snake.maxCells++;
       apple.x = getRandomInt(0, 25) * grid;
       apple.y = getRandomInt(0, 25) * grid;
-      score++; // Збільшення рахунку при з'їданні яблука
+      score++;
+      if (score % 5 === 0 && speed > 3) { // Збільшуємо швидкість кожних 5 очок, але не менше 10
+        speed -= 0.5;
+      }
     }
     for (var i = index + 1; i < snake.cells.length; i++) {
       if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
@@ -69,6 +73,7 @@ function loop() {
         snake.dy = 0;
         apple.x = getRandomInt(0, 25) * grid;
         apple.y = getRandomInt(0, 25) * grid;
+        speed = 10; // Повертаємо швидкість до початкового значення
       }
     }
   });
