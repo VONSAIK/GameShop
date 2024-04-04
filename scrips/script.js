@@ -18,6 +18,30 @@ var score = 0;
 var scores = JSON.parse(localStorage.getItem('snakeScores')) || [];
 var speed = 10; // Початкова швидкість
 
+// Перешкоди
+var obstacles = [];
+
+// Функція створення перешкод
+function createObstacles() {
+  obstacles = [];
+  for (var i = 0; i < 10; i++) { // 10 перешкод
+    obstacles.push({
+      x: getRandomInt(0, 25) * grid,
+      y: getRandomInt(0, 25) * grid,
+      width: grid,
+      height: grid
+    });
+  }
+}
+
+// Функція малювання перешкод
+function drawObstacles() {
+  context.fillStyle = 'gray';
+  obstacles.forEach(function (obstacle) {
+    context.fillRect(obstacle.x, obstacle.y, obstacle.width, obstacle.height);
+  });
+}
+
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
@@ -32,16 +56,11 @@ function loop() {
 
   snake.x += snake.dx;
   snake.y += snake.dy;
-  if (snake.x < 0) {
-    snake.x = canvas.width - grid;
-  } else if (snake.x >= canvas.width) {
-    snake.x = 0;
+  if (snake.x < 0 || snake.x >= canvas.width || snake.y < 0 || snake.y >= canvas.height) {
+    endGame();
+    return;
   }
-  if (snake.y < 0) {
-    snake.y = canvas.height - grid;
-  } else if (snake.y >= canvas.height) {
-    snake.y = 0;
-  }
+
   snake.cells.unshift({ x: snake.x, y: snake.y });
   if (snake.cells.length > snake.maxCells) {
     snake.cells.pop();
@@ -60,22 +79,12 @@ function loop() {
         speed -= 0.5;
       }
     }
-    for (var i = index + 1; i < snake.cells.length; i++) {
-      if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
-        scores.push(score);
-        localStorage.setItem('snakeScores', JSON.stringify(scores));
-        score = 0;
-        snake.x = 160;
-        snake.y = 160;
-        snake.cells = [];
-        snake.maxCells = 4;
-        snake.dx = grid;
-        snake.dy = 0;
-        apple.x = getRandomInt(0, 25) * grid;
-        apple.y = getRandomInt(0, 25) * grid;
-        speed = 10; // Повертаємо швидкість до початкового значення
+    obstacles.forEach(function (obstacle) {
+      if (cell.x === obstacle.x && cell.y === obstacle.y) {
+        endGame();
+        return;
       }
-    }
+    });
   });
 
   // Оновлення рахунку на екрані
@@ -95,6 +104,8 @@ function loop() {
   scores.sort((a, b) => a - b).slice(0, 3).forEach((value, index) => {
     context.fillText((index + 1) + '. ' + value, 10, canvas.height - 40 - index * 20);
   });
+
+  drawObstacles(); // Малюємо перешкоди
 }
 
 document.addEventListener('keydown', function (e) {
@@ -113,4 +124,23 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
+createObstacles(); // Створюємо перешкоди на початку гри
 requestAnimationFrame(loop);
+
+function endGame() {
+  scores.push(score);
+  scores.sort((a, b) => b - a); 
+  scores = scores.slice(0, 3); 
+  localStorage.setItem('snakeScores', JSON.stringify(scores));
+  score = 0;
+  snake.x = 160;
+  snake.y = 160;
+  snake.cells = [];
+  snake.maxCells = 4;
+  snake.dx = grid;
+  snake.dy = 0;
+  apple.x = getRandomInt(0, 25) * grid;
+  apple.y = getRandomInt(0, 25) * grid;
+  speed = 10; // Повертаємо швидкість до початкового значення
+  createObstacles(); // Створення нових перешкод
+}
